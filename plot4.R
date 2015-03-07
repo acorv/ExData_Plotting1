@@ -5,7 +5,7 @@ filteredData <-data[data$Date>=strptime("1/2/2007", format="%d/%m/%Y") & data$Da
 filteredData$dt <- strptime(paste(as.character(filteredData$Date), as.character(filteredData$Time)), format="%Y-%m-%d %H:%M:%S")
 
 #Init device
-png(file="plot4.png")
+png(file="plot4.png",  bg = "transparent")
 
 # 2x2 Matrix
 par(mfcol=c(2,2)) 

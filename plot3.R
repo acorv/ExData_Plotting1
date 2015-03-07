@@ -5,7 +5,7 @@ filteredData <-data[data$Date>=strptime("1/2/2007", format="%d/%m/%Y") & data$Da
 filteredData$dt <- strptime(paste(as.character(filteredData$Date), as.character(filteredData$Time)), format="%Y-%m-%d %H:%M:%S")
 
 #Init device
-png(file="plot3.png")
+png(file="plot3.png", bg = "transparent")
 
 plot(filteredData$dt, as.numeric(as.character(filteredData$Sub_metering_1)), type="n", ylab="Energy sub metering", xlab="")
 lines(filteredData$dt, as.numeric(as.character(filteredData$Sub_metering_1)))
